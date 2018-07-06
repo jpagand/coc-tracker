@@ -439,7 +439,7 @@ export default {
     {level: 8, cost: 27.5 * K, resource: BLACK, time: 1 * DAYS, requiredTH: 8, picture: require('../assets/images/Barbarian_King1.png')},
     {level: 9, cost: 30 * K, resource: BLACK, time: 1 * DAYS, requiredTH: 8, picture: require('../assets/images/Barbarian_King1.png')},
     {level: 10, cost: 32.5 * K, resource: BLACK, time: 2 * DAYS, requiredTH: 8, picture: require('../assets/images/Barbarian_King10.png')},
-    {level: 11, cost: 35 * K, resource: BLACK, time: 2 * DAYS, requiredTH: 8, picture: require('../assets/images/Barbarian_King10.png')},
+    {level: 11, cost: 35 * K, resource: BLACK, time: 2 * DAYS, requiredTH: 9, picture: require('../assets/images/Barbarian_King10.png')},
     {level: 12, cost: 39 * K, resource: BLACK, time: 2 * DAYS, requiredTH: 9, picture: require('../assets/images/Barbarian_King10.png')},
     {level: 13, cost: 43 * K, resource: BLACK, time: 2.5 * DAYS, requiredTH: 9, picture: require('../assets/images/Barbarian_King10.png')},
     {level: 14, cost: 47 * K, resource: BLACK, time: 2.5 * DAYS, requiredTH: 9, picture: require('../assets/images/Barbarian_King10.png')},
