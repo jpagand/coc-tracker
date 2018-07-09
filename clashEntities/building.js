@@ -36,12 +36,13 @@ const Building = (building, TH) => {
 
   const getDurationToMax = () => {
     const maxLvl = getMaxLevel();
-    return BUILDING_LEVELS[building.buildingType].reduce((acc, level) => {
+    const durationToMax = BUILDING_LEVELS[building.buildingType].reduce((acc, level) => {
       if (level.level > building.level && level.level <= maxLvl ) {
         return acc + (level.time || 0)
       }
       return acc;
     }, 0)
+    return durationToMax
   }
 
   const max = () => {

@@ -3,6 +3,8 @@ import { combineReducers } from 'redux';
 import Building from './building';
 import TownHall from './townHall';
 import BUILDING_TYPES from './buildingTypes';
+import AVAILABLE_BUILDINGS from './availableBuildings';
+import BUILDING_LEVELS from './buildingLevels';
 import { getTh, getDurationToBuild, getDurationToMax } from './stateHelpers';
 
 const getUuid = () => {
@@ -20,11 +22,18 @@ const buildings = (state = [], action) => {
       thId: th.id
     }))
 
+  const getNewWalls = (th) => TownHall(th).getNewWalls().map(b => ({
+      id: getUuid(),
+      buildingType: BUILDING_TYPES.WALL,
+      level: b.level,
+      quantity: 0,
+      thId: th.id
+    }))
+
   let th;
   let newState;
   switch (action.type) {
     case 'ADD_BUILDING':
-    console.log('ADD_BUILDING', action);
       return [...state, {
         id: getUuid(),
         buildingType: action.buildingType,
@@ -32,7 +41,6 @@ const buildings = (state = [], action) => {
         level: 0
       }]
     case 'ADD_TOWN_HALL':
-    console.log('ADD_TOWN_HALL', action);
     const th = {
       id: getUuid(),
       buildingType: BUILDING_TYPES.TOWN_HALL,
@@ -44,7 +52,7 @@ const buildings = (state = [], action) => {
         thId: th.id,
         buildingType: BUILDING_TYPES.BUILDER_HUT,
         level: 1,
-      },...getNewBuildings(th)]
+      },...getNewBuildings(th), ...getNewWalls(th)]
     case 'REMOVE_BUILDING':
       return state.filter(building => building.id !== action.id)
     case 'REMOVE_TOWN_HALL':
@@ -61,6 +69,16 @@ const buildings = (state = [], action) => {
           ? Building(building, getTh(state, building.thId)).downgrade()
           : building
         )
+    case 'UPGRADE_WALL':
+      return state.map(building =>
+        (building.id === action.id)
+        ? {...building, quantity: building.quantity + action.quantity}
+        : building)
+    case 'DOWNGRADE_WALL':
+      return state.map(building =>
+        (building.id === action.id)
+        ? {...building, quantity: building.quantity - action.quantity}
+        : building)
     case 'MAX_BUILDING':
       return state.map(building =>
         (building.id === action.id)
@@ -70,7 +88,7 @@ const buildings = (state = [], action) => {
     case 'MAX_TOWN_HALL':
       th  = getTh(state, action.id)
       return state.map(building =>
-        (building.thId === action.id)
+        (building.thId === action.id && building.buildingType !== BUILDING_TYPES.WALL)
           ? Building(building, th).max()
           : building
         )
@@ -83,7 +101,8 @@ const buildings = (state = [], action) => {
           return building
         }
       })
-      return [...newState, ...getNewBuildings(th)]
+
+      return [...newState, ...getNewBuildings(th), ...getNewWalls(th)]
     case 'DOWNGRADE_TOWN_HALL':
       newState = state.map(building => {
         if (building.id === action.id) {
@@ -97,17 +116,32 @@ const buildings = (state = [], action) => {
         return [...newState.filter(building => building.thId !== th.id)]
       } else {
         let buildingsToRemove = TownHall(th).getRemovedBuildings()
+        let maxWalls = AVAILABLE_BUILDINGS[BUILDING_TYPES.WALL][th.level - 1] || 0
         return [...newState.filter(building => {
-          if (building.thId === th.id && buildingsToRemove.includes(building.buildingType)) {
-            _.pullAt(buildingsToRemove, [buildingsToRemove.indexOf(building.buildingType)])
-            return false
+          if (building.thId === th.id ) {
+            if (building.buildingType === BUILDING_TYPES.WALL) {
+              return _.find(BUILDING_LEVELS[BUILDING_TYPES.WALL], {level: building.level}).requiredTH <= th.level
+            }
+            if (buildingsToRemove.includes(building.buildingType)) {
+              _.pullAt(buildingsToRemove, [buildingsToRemove.indexOf(building.buildingType)])
+              return false
+            }
           }
           return true
         }).map(building => {
           // dowgrade building that are above new max
           try {
-            if (building.thId === th.id && building.level > Building(building, th).getMaxLevel() ) {
-              return Building(building, th).max()
+            if (building.thId === th.id) {
+              if (building.buildingType === BUILDING_TYPES.WALL) {
+                maxWalls -= building.quantity;
+                if (maxWalls < 0 && building.quantity ) {
+                  return {...building, quantity: 0}
+                }
+                return building;
+              }
+              if (building.level > Building(building, th).getMaxLevel() ) {
+                return Building(building, th).max()
+              }
             }
           } catch(e) {
             console.log('!!!! downgrade max', building.buildingType);

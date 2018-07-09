@@ -22,6 +22,18 @@ export const downgradeBuilding = id => ({
   id
 })
 
+export const upgradeWall = (id, quantity) => ({
+  type: 'UPGRADE_WALL',
+  id,
+  quantity
+})
+
+export const downgradeWall = (id, quantity) => ({
+  type: 'DOWNGRADE_WALL',
+  id,
+  quantity
+})
+
 export const maxBuilding = id => ({
   type: 'MAX_BUILDING',
   id

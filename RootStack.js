@@ -3,12 +3,14 @@ import { createStackNavigator } from 'react-navigation';
 import TownHallList from './TownHallList';
 import TownHall from './TownHall';
 import Defenses from './Defenses';
+import Walls from './Walls';
 
 const RootStack = createStackNavigator(
   {
   TownHallList: TownHallList,
   TownHall: TownHall,
   Defenses: Defenses,
+  Walls: Walls,
   },
   {
     initialRouteName: 'TownHallList',

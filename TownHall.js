@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import Building from './clashEntities/building';
 import Townhall from './clashEntities/townHall';
 import BUILDING_TYPES from './clashEntities/buildingTypes';
-import { getTh, getThBuilderHut, getCategoryThBuildings, getDurationToMax, getCostToMax, summCosts } from './clashEntities/stateHelpers';
+import { getTh, getThBuilderHut, getCategoryThBuildings, getDurationToMax, getCostToMax, summCosts, getWalls, getCostToMaxWall} from './clashEntities/stateHelpers';
 import {
   upgradeTownHall,
   downgradeTownHall,
@@ -95,7 +95,6 @@ class TownHall extends Component {
     }
     const townHall = Townhall(this.props.townHall)
     const builderHut = Building(this.props.builderHut, this.props.townHall)
-
     return (
       <Container>
 
@@ -209,6 +208,10 @@ class TownHall extends Component {
                   {durationToMaxSiegeMachine === 0 && <TextStyled>Maxed!</TextStyled>}
                 </StyledListItem>
               }
+              <StyledListItem onPress={() => navigation.navigate('Walls', {thId: townHall.id})}>
+                <Thumbnail style={{resizeMode: 'contain'}} square source={require('./assets/images/Wall13.png')} />
+                <TextStyled>Walls</TextStyled>
+              </StyledListItem>
 
 
             </List>
@@ -241,7 +244,6 @@ const mapStateToProps = ({buildings}, {navigation}) => {
   const defenses = getCategoryThBuildings(buildings, thId, BUILDING_TYPES.DEFENSES);
   const durationToMaxDef = getDurationToMax(defenses, townHall, builderHut.level);
   const costToMaxDef = getCostToMax(defenses, townHall);
-
   const troops = getCategoryThBuildings(buildings, thId, BUILDING_TYPES.TROOPS);
   const durationToMaxTroop = getDurationToMax(troops, townHall, 1);
   const costToMaxTroop = getCostToMax(troops, townHall);
@@ -273,6 +275,9 @@ const mapStateToProps = ({buildings}, {navigation}) => {
   const traps = getCategoryThBuildings(buildings, thId, BUILDING_TYPES.TRAPS);
   const durationToMaxTrap = getDurationToMax(traps, townHall, builderHut.level);
   const costToMaxTrap = getCostToMax(traps, townHall);
+
+  const walls = getWalls(buildings, thId)
+  const costToMaxWall = getCostToMaxWall(walls)
 
   const durationToMaxBuilding = getDurationToMax([...traps, ...otherBuildings, ...heroes, ...defenses], townHall, builderHut.level)
   const durationToMaxLab = getDurationToMax([...siegeMachines, ...darkSpells, ...spells, ...darkTroops, ...troops], townHall, 1);

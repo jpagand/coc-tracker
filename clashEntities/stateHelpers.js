@@ -21,6 +21,13 @@ export const getAllThBuildings = (state, thId) => state.filter(b => b.thId === t
 export const getCategoryThBuildings = (state, thId, category) =>
   state.filter(b => category[b.buildingType] && b.thId === thId)
 
+export const getWalls = (state, thId) =>
+  state.filter(b => b.thId === thId && b.buildingType === BUILDING_TYPES.WALL)
+
+export const getCostToMaxWall = (walls) => {
+  //TODO
+}
+
 
 export const getThBuilderHut = (state, thId) =>
   state.find(building => building.buildingType === BUILDING_TYPES.BUILDER_HUT && building.thId === thId)

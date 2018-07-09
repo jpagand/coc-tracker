@@ -84,7 +84,11 @@ export default {
     'GIANT_BOMB': 'GIANT_BOMB',
     'SEEKING_AIR_MINE': 'SEEKING_AIR_MINE',
     'SKELETON_TRAP': 'SKELETON_TRAP',
-  }
+  },
+  'WALL': 'WALL',
+
+
+
 
 
 }

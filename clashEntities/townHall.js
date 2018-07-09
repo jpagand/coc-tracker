@@ -12,21 +12,30 @@ const TownHall = (th) => {
   const getNewBuildings = () => {
     const newBuildings = [];
     _.forEach(AVAILABLE_BUILDINGS, (buildingNumber, type) => {
-      const numberToAdd = buildingNumber[th.level - 1] - (buildingNumber[th.level - 2] || 0 )
-      _.times(numberToAdd, () => {
-        newBuildings.push(type)
-      })
+      if (type !== BUILDING_TYPES.WALL) {
+        const numberToAdd = buildingNumber[th.level - 1] - (buildingNumber[th.level - 2] || 0 )
+        _.times(numberToAdd, () => {
+          newBuildings.push(type)
+        })
+      }
     })
     return newBuildings;
+  }
+
+  const getNewWalls = () => {
+    const walls = BUILDING_LEVELS[BUILDING_TYPES.WALL].filter(w => w.requiredTH === th.level);
+    return walls
   }
 
   const getRemovedBuildings = () => {
     const removedBuildings = []
     _.forEach(AVAILABLE_BUILDINGS, (buildingNumber, type) => {
-      const numberToRemove = buildingNumber[th.level] - buildingNumber[th.level - 1];
-      _.times(numberToRemove, () => {
-        removedBuildings.push(type)
-      })
+      if (type !== BUILDING_TYPES.WALL) {
+        const numberToRemove = buildingNumber[th.level] - buildingNumber[th.level - 1];
+        _.times(numberToRemove, () => {
+          removedBuildings.push(type)
+        })
+      }
     })
     return removedBuildings;
   }
@@ -54,7 +63,7 @@ const TownHall = (th) => {
 
 
 
-  return { getNewBuildings, getRemovedBuildings, isMaxed, nextLevel, upgrade, downgrade, picture, ...th}
+  return { getNewBuildings, getRemovedBuildings, isMaxed, nextLevel, upgrade, downgrade, picture, getNewWalls, ...th}
 }
 
 export default TownHall;
