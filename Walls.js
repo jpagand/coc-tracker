@@ -33,9 +33,9 @@ class Walls extends Component {
       <Container>
         <StyledContent>
           <StyledListItem padding>
-            <TextStyled>{totalWall}/{maxWalls} walls</TextStyled>
+            <TextStyled>{totalWall}/{maxWalls}    </TextStyled>
             <TextStyled>To max:</TextStyled>
-              <ResourceRecap costs={costToMax}/>
+            <ResourceRecap costs={costToMax}/>
 
           </StyledListItem>
 
