@@ -23,10 +23,10 @@ const styles = StyleSheet.create({
 
   },
   listItemOrange: {
-    borderRadius: 6,
-    borderWidth: 1,
-    borderColor: '#d9ad66',
-    marginBottom: 12
+    borderColor: '#d9ad66'
+  },
+  listPadding: {
+    padding: 6
   },
   listItemBase: {
     borderBottomWidth: 0,
@@ -55,8 +55,8 @@ const StyledContent = ({children, ...etc}) => (
     <Content {...etc}>{children}</Content>
   </LinearGradient>
 )
-const StyledListItem = ({children, orange, onPress,...etc}) => (
-  <LinearGradient {...etc} style={orange ? styles.listItemOrange : styles.listItem} colors={orange ? ['#FAD062', '#f6b851'] :['#51B9D2', '#3179A1']}>
+const StyledListItem = ({children, orange, onPress, padding, ...etc}) => (
+  <LinearGradient {...etc} style={[styles.listItem, orange && styles.listItemOrange, padding && styles.listPadding]} colors={orange ? ['#FAD062', '#f6b851'] :['#51B9D2', '#3179A1']}>
     <ListItem onPress={onPress} style={styles.listItemBase}>{children}</ListItem>
   </LinearGradient>
 )

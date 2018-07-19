@@ -10,10 +10,12 @@ const {StyledContent, StyledListItem, GreenButton, RedButton, TextStyled} = Styl
 import ResourceRecap from './ResourceRecap';
 
 class WallComponent extends Component {
-
+    shouldComponentUpdate(nextProps, nextState) {
+      return nextProps.wall.quantity !== this.props.wall.quantity
+    }
     render() {
     const { wall, townHall, onMinusClick, onPlusClick, totalWall, maxWalls } = this.props;
-    const w = Building(wall, townHall)
+    const w = wall;
     return (
       <StyledListItem key={w.id}>
         <Grid>
@@ -41,11 +43,12 @@ class WallComponent extends Component {
                   disabled={totalWall + 10 > maxWalls}>
                   <TextStyled>+10</TextStyled>
                 </GreenButton>
-
               </Fragment>
 
           </Row>
-
+          <Row>
+            <ResourceRecap costs={w.costs} />
+          </Row>
         </Grid>
       </StyledListItem>
     );

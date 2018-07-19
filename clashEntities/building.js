@@ -3,7 +3,8 @@ import BUILDING_LEVELS from './buildingLevels';
 import {GOLD, ELIXIR, BLACK} from './resources';
 
 const Building = (building, TH) => {
-  const picture = _.find(BUILDING_LEVELS[building.buildingType], {level: building.level || 1}).picture
+  const current = _.find(BUILDING_LEVELS[building.buildingType], {level: building.level || 1})
+  const picture = current.picture
 
   const getMaxLevel = () => {
     const maxLvl = _.findLast(BUILDING_LEVELS[building.buildingType], b => {
@@ -73,6 +74,7 @@ const Building = (building, TH) => {
     getCostToMax,
     max,
     picture,
+    current,
     ...building
   }
 }

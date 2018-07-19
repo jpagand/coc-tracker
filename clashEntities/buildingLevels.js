@@ -782,19 +782,19 @@ export default {
   //**END TRAPS**//
   //WALLS//
   [BUILDING_TYPES.WALL]: [
-    {level: 1, cost: 50, resource: GOLD, time: 0, requiredTH: 2, picture: require('../assets/images/Wall1.png')},
-    {level: 2, cost: 1 * K, resource: GOLD, time: 0, requiredTH: 2, picture: require('../assets/images/Wall2.png')},
-    {level: 3, cost: 5 * K, resource: GOLD, time: 0, requiredTH: 3, picture: require('../assets/images/Wall3.png')},
-    {level: 4, cost: 10 * K, resource: GOLD, time: 0, requiredTH: 4, picture: require('../assets/images/Wall4.png')},
-    {level: 5, cost: 25 * K, resource: GOLD, time: 0, requiredTH: 5, picture: require('../assets/images/Wall5.png')},
-    {level: 6, cost: 50 * K, resource: GOLD, time: 0, requiredTH: 6, picture: require('../assets/images/Wall6.png')},
-    {level: 7, cost: 100 * K, resource: GOLD, time: 0, requiredTH: 7, picture: require('../assets/images/Wall7.png')},
-    {level: 8, cost: 250 * K, resource: GOLD, time: 0, requiredTH: 8, picture: require('../assets/images/Wall8.png')},
-    {level: 9, cost: 500 * K, resource: GOLD, resource2: ELIXIR, time: 0, requiredTH: 9, picture: require('../assets/images/Wall9.png')},
-    {level: 10, cost: 1 * M, resource: GOLD, resource2: ELIXIR, time: 0, requiredTH: 9, picture: require('../assets/images/Wall10.png')},
-    {level: 11, cost: 2 * M, resource: GOLD, resource2: ELIXIR, time: 0, requiredTH: 10, picture: require('../assets/images/Wall11.png')},
-    {level: 12, cost: 4 * M, resource: GOLD, resource2: ELIXIR, time: 0, requiredTH: 11, picture: require('../assets/images/Wall12.png')},
-    {level: 13, cost: 5 * M, resource: GOLD, resource2: ELIXIR, time: 0, requiredTH: 12, maxPieces: 100, picture: require('../assets/images/Wall13.png')},
+    {level: 1, cost: 50, resource: GOLD, cumulativeCost: 50, time: 0, requiredTH: 2, picture: require('../assets/images/Wall1.png')},
+    {level: 2, cost: 1 * K, resource: GOLD, cumulativeCost: 1050, time: 0, requiredTH: 2, picture: require('../assets/images/Wall2.png')},
+    {level: 3, cost: 5 * K, resource: GOLD, cumulativeCost: 6050, time: 0, requiredTH: 3, picture: require('../assets/images/Wall3.png')},
+    {level: 4, cost: 10 * K, resource: GOLD, cumulativeCost: 16050, time: 0, requiredTH: 4, picture: require('../assets/images/Wall4.png')},
+    {level: 5, cost: 25 * K, resource: GOLD, cumulativeCost: 41050, time: 0, requiredTH: 5, picture: require('../assets/images/Wall5.png')},
+    {level: 6, cost: 50 * K, resource: GOLD, cumulativeCost: 91050, time: 0, requiredTH: 6, picture: require('../assets/images/Wall6.png')},
+    {level: 7, cost: 100 * K, resource: GOLD, cumulativeCost: 191050, time: 0, requiredTH: 7, picture: require('../assets/images/Wall7.png')},
+    {level: 8, cost: 250 * K, resource: GOLD, cumulativeCost: 441050, time: 0, requiredTH: 8, picture: require('../assets/images/Wall8.png')},
+    {level: 9, cost: 500 * K, resource: GOLD, cumulativeCost: 441050, cumulativeCost2: 500 * K, resource2: ELIXIR, time: 0, requiredTH: 9, picture: require('../assets/images/Wall9.png')},
+    {level: 10, cost: 1 * M, resource: GOLD, cumulativeCost: 441050, cumulativeCost2: 1.5 * M, resource2: ELIXIR, time: 0, requiredTH: 9, picture: require('../assets/images/Wall10.png')},
+    {level: 11, cost: 2 * M, resource: GOLD, cumulativeCost: 441050, cumulativeCost2: 3.5 * M, resource2: ELIXIR, time: 0, requiredTH: 10, picture: require('../assets/images/Wall11.png')},
+    {level: 12, cost: 4 * M, resource: GOLD, cumulativeCost: 441050, cumulativeCost2: 7.5 * M, resource2: ELIXIR, time: 0, requiredTH: 11, picture: require('../assets/images/Wall12.png')},
+    {level: 13, cost: 5 * M, resource: GOLD, cumulativeCost: 441050, cumulativeCost2: 12.5 * M, resource2: ELIXIR, time: 0, requiredTH: 12, maxPieces: 100, picture: require('../assets/images/Wall13.png')},
   ],
 
 }
