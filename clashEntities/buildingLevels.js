@@ -25,7 +25,7 @@ export default {
     {level: 11, cost: 7 * M, resource: GOLD, time: 14 * DAYS, picture: require('../assets/images/Town_Hall11.png')},
     {level: 12, cost: 9.5 * M, resource: GOLD, time: 14 * DAYS, picture: require('../assets/images/Town_Hall12.png')},
   ],
-  [BUILDING_TYPES.DEFENSES.CANON]: [
+  [BUILDING_TYPES.DEFENSES['01CANON']]: [
     {level: 1, cost: 250, resource: GOLD, time: 10 * SECONDS, requiredTH: 1, picture: require('../assets/images/Cannon1.png')},
     {level: 2, cost: 1 * K, resource: GOLD, time: 15 * MINUTES, requiredTH: 1, picture: require('../assets/images/Cannon2.png')},
     {level: 3, cost: 4 * K, resource: GOLD, time: 45 * MINUTES, requiredTH: 2, picture: require('../assets/images/Cannon3.png')},
@@ -43,7 +43,7 @@ export default {
     {level: 15, cost: 9 * M, resource: GOLD, time: 6 * DAYS, requiredTH: 11, picture: require('../assets/images/Cannon15.png')},
     {level: 16, cost: 11 * M, resource: GOLD, time: 10 * DAYS, requiredTH: 12, picture: require('../assets/images/Cannon16.png')},
   ],
-  [BUILDING_TYPES.DEFENSES.ARCHER_TOWER]: [
+  [BUILDING_TYPES.DEFENSES['02ARCHER_TOWER']]: [
     {level: 1, cost: 1000, resource: GOLD, time: 1 * MINUTES, requiredTH: 2, picture: require('../assets/images/Archer_Tower1.png')},
     {level: 2, cost: 2 * K, resource: GOLD, time: 30 * MINUTES, requiredTH: 2, picture: require('../assets/images/Archer_Tower2.png')},
     {level: 3, cost: 5 * K, resource: GOLD, time: 45 * MINUTES, requiredTH: 3, picture: require('../assets/images/Archer_Tower3.png')},
@@ -61,7 +61,7 @@ export default {
     {level: 15, cost: 9.5 * M, resource: GOLD, time: 8 * DAYS, requiredTH: 11, picture: require('../assets/images/Archer_Tower15.png')},
     {level: 16, cost: 11 * M, resource: GOLD, time: 11 * DAYS, requiredTH: 12, picture: require('../assets/images/Archer_Tower16.png')},
   ],
-  [BUILDING_TYPES.DEFENSES.MORTAR]: [
+  [BUILDING_TYPES.DEFENSES['03MORTAR']]: [
     {level: 1, cost: 8 * K, resource: GOLD, time: 5 * HOURS, requiredTH: 3, picture: require('../assets/images/Mortar1.png')},
     {level: 2, cost: 32 * K, resource: GOLD, time: 8 * HOURS, requiredTH: 4, picture: require('../assets/images/Mortar2.png')},
     {level: 3, cost: 120 * K, resource: GOLD, time: 16 * HOURS, requiredTH: 5, picture: require('../assets/images/Mortar3.png')},
@@ -74,7 +74,7 @@ export default {
     {level: 10, cost: 9 * M, resource: GOLD, time: 10 * DAYS, requiredTH: 11, picture: require('../assets/images/Mortar10.png')},
     {level: 11, cost: 11 * M, resource: GOLD, time: 14 * DAYS, requiredTH: 12, picture: require('../assets/images/Mortar11.png')},
   ],
-  [BUILDING_TYPES.DEFENSES.AIR_DEFENSE]: [
+  [BUILDING_TYPES.DEFENSES['04AIR_DEFENSE']]: [
     {level: 1, cost: 22.5 * K, resource: GOLD, time: 3 * HOURS, requiredTH: 4, picture: require('../assets/images/Air_Defense1.png')},
     {level: 2, cost: 90 * K, resource: GOLD, time: 12 * HOURS, requiredTH: 4, picture: require('../assets/images/Air_Defense2.png')},
     {level: 3, cost: 270 * K, resource: GOLD, time: 2 * DAYS, requiredTH: 5, picture: require('../assets/images/Air_Defense3.png')},
@@ -86,7 +86,7 @@ export default {
     {level: 9, cost: 8.8 * M, resource: GOLD, time: 10 * DAYS, requiredTH: 11, picture: require('../assets/images/Air_Defense9.png')},
     {level: 10, cost: 10.8 * M, resource: GOLD, time: 14 * DAYS, requiredTH: 12, picture: require('../assets/images/Air_Defense10.png')},
   ],
-  [BUILDING_TYPES.DEFENSES.WIZARD_TOWER]: [
+  [BUILDING_TYPES.DEFENSES['05WIZARD_TOWER']]: [
     {level: 1, cost: 180 * K, resource: GOLD, time: 8 * HOURS, requiredTH: 5, picture: require('../assets/images/Wizard_Tower1.png')},
     {level: 2, cost: 360 * K, resource: GOLD, time: 12 * HOURS, requiredTH: 5, picture: require('../assets/images/Wizard_Tower2.png')},
     {level: 3, cost: 700 * K, resource: GOLD, time: 1.5 * DAYS, requiredTH: 6, picture: require('../assets/images/Wizard_Tower3.png')},
@@ -99,7 +99,7 @@ export default {
     {level: 10, cost: 9.2 * M, resource: GOLD, time: 10 * DAYS, requiredTH: 11, picture: require('../assets/images/Wizard_Tower10.png')},
     {level: 11, cost: 11.2 * M, resource: GOLD, time: 14 * DAYS, requiredTH: 12, picture: require('../assets/images/Wizard_Tower11.png')},
   ],
-  [BUILDING_TYPES.DEFENSES.AIR_SWEEPER]: [
+  [BUILDING_TYPES.DEFENSES['06AIR_SWEEPER']]: [
     {level: 1, cost: 500 * K, resource: GOLD, time: 12 * HOURS, requiredTH: 6, picture: require('../assets/images/Air_Sweeper1.png')},
     {level: 2, cost: 750 * K, resource: GOLD, time: 2 * DAYS, requiredTH: 6, picture: require('../assets/images/Air_Sweeper2.png')},
     {level: 3, cost: 1.25 * M, resource: GOLD, time: 3.5 * DAYS, requiredTH: 7, picture: require('../assets/images/Air_Sweeper3.png')},
@@ -108,7 +108,7 @@ export default {
     {level: 6, cost: 7.2 * M, resource: GOLD, time: 6 * DAYS, requiredTH: 10, picture: require('../assets/images/Air_Sweeper6.png')},
     {level: 7, cost: 9.6 * M, resource: GOLD, time: 6.5 * DAYS, requiredTH: 11, picture: require('../assets/images/Air_Sweeper7.png')},
   ],
-  [BUILDING_TYPES.DEFENSES.TESLA]: [
+  [BUILDING_TYPES.DEFENSES['0707TESLA']]: [
     {level: 1, cost: 1 * M, resource: GOLD, time: 12 * HOURS, requiredTH: 7, picture: require('../assets/images/Hidden_Tesla1.png')},
     {level: 2, cost: 1.25 * M, resource: GOLD, time: 2 * DAYS, requiredTH: 7, picture: require('../assets/images/Hidden_Tesla2.png')},
     {level: 3, cost: 1.5 * M, resource: GOLD, time: 3.5 * DAYS, requiredTH: 7, picture: require('../assets/images/Hidden_Tesla3.png')},
@@ -120,7 +120,7 @@ export default {
     {level: 9, cost: 8 * M, resource: GOLD, time: 10 * DAYS, requiredTH: 11, picture: require('../assets/images/Hidden_Tesla9.png')},
     {level: 10, cost: 10 * M, resource: GOLD, time: 14 * DAYS, requiredTH: 12, picture: require('../assets/images/Hidden_Tesla10.png')},
   ],
-  [BUILDING_TYPES.DEFENSES.BOMB_TOWER]: [
+  [BUILDING_TYPES.DEFENSES['08BOMB_TOWER']]: [
     {level: 1, cost: 2 * M, resource: GOLD, time: 2.5 * DAYS, requiredTH: 8, picture: require('../assets/images/Bomb_Tower1.png')},
     {level: 2, cost: 3.5 * M, resource: GOLD, time: 4 * DAYS, requiredTH: 8, picture: require('../assets/images/Bomb_Tower2.png')},
     {level: 3, cost: 5 * M, resource: GOLD, time: 6 * DAYS, requiredTH: 9, picture: require('../assets/images/Bomb_Tower3.png')},
@@ -129,7 +129,7 @@ export default {
     {level: 6, cost: 10 * M, resource: GOLD, time: 10 * DAYS, requiredTH: 11, picture: require('../assets/images/Bomb_Tower6.png')},
     {level: 7, cost: 11 * M, resource: GOLD, time: 14 * DAYS, requiredTH: 12, picture: require('../assets/images/Bomb_Tower7.png')},
   ],
-  [BUILDING_TYPES.DEFENSES.XBOW]: [
+  [BUILDING_TYPES.DEFENSES['09XBOW']]: [
     {level: 1, cost: 3 * M, resource: GOLD, time: 4.5 * DAYS, requiredTH: 9, picture: require('../assets/images/Xbow_Air1.png')},
     {level: 2, cost: 4 * M, resource: GOLD, time: 5.5 * DAYS, requiredTH: 9, picture: require('../assets/images/Xbow_Air2.png')},
     {level: 3, cost: 5 * M, resource: GOLD, time: 6.5 * DAYS, requiredTH: 9, picture: require('../assets/images/Xbow_Air3.png')},
@@ -137,7 +137,7 @@ export default {
     {level: 5, cost: 9.5 * M, resource: GOLD, time: 10 * DAYS, requiredTH: 11, picture: require('../assets/images/Xbow_Air5.png')},
     {level: 6, cost: 12 * M, resource: GOLD, time: 14 * DAYS, requiredTH: 12, picture: require('../assets/images/Xbow_Air6.png')},
   ],
-  [BUILDING_TYPES.DEFENSES.INFERNO_TOWER]: [
+  [BUILDING_TYPES.DEFENSES['10INFERNO_TOWER']]: [
     {level: 1, cost: 5 * M, resource: GOLD, time: 4.5 * DAYS, requiredTH: 10, picture: require('../assets/images/Inferno_Tower_Multi1.png')},
     {level: 2, cost: 6 * M, resource: GOLD, time: 5.5 * DAYS, requiredTH: 10, picture: require('../assets/images/Inferno_Tower_Multi2.png')},
     {level: 3, cost: 7 * M, resource: GOLD, time: 6.5 * DAYS, requiredTH: 10, picture: require('../assets/images/Inferno_Tower_Multi3.png')},
@@ -145,12 +145,12 @@ export default {
     {level: 5, cost: 10 * M, resource: GOLD, time: 10 * DAYS, requiredTH: 11, picture: require('../assets/images/Inferno_Tower_Multi5.png')},
     {level: 6, cost: 11 * M, resource: GOLD, time: 14 * DAYS, requiredTH: 12, picture: require('../assets/images/Inferno_Tower_Multi6.png')},
   ],
-  [BUILDING_TYPES.DEFENSES.EAGLE_ARTILLERY]: [
+  [BUILDING_TYPES.DEFENSES['11EAGLE_ARTILLERY']]: [
     {level: 1, cost: 8 * M, resource: GOLD, time: 7 * DAYS, requiredTH: 11, picture: require('../assets/images/Eagle_Artillery1.png')},
     {level: 2, cost: 10 * M, resource: GOLD, time: 10 * DAYS, requiredTH: 11, picture: require('../assets/images/Eagle_Artillery2.png')},
     {level: 3, cost: 12 * M, resource: GOLD, time: 14 * DAYS, requiredTH: 12, picture: require('../assets/images/Eagle_Artillery3.png')},
   ],
-  [BUILDING_TYPES.DEFENSES.GIGA_TESLA]: [
+  [BUILDING_TYPES.DEFENSES['12GIGA_TESLA']]: [
     {level: 1, cost: 0, resource: GOLD, time: 0, requiredTH: 12, picture: require('../assets/images/Giga_Tesla1.png')},
     {level: 2, cost: 6 * M, resource: GOLD, time: 2 * DAYS, requiredTH: 12, picture: require('../assets/images/Giga_Tesla2.png')},
     {level: 3, cost: 8 * M, resource: GOLD, time: 4 * DAYS, requiredTH: 12, picture: require('../assets/images/Giga_Tesla3.png')},
@@ -160,7 +160,7 @@ export default {
   //**END DEFENSES**/
 
   //**TROOPS**//
-  [BUILDING_TYPES.TROOPS.BARBARIAN]: [
+  [BUILDING_TYPES.TROOPS['01BARBARIAN']]: [
     {level: 1, cost: 0, resource: ELIXIR, time: 0, requiredTH: 1, picture: require('../assets/images/Barbarian1.png')},
     {level: 2, cost: 50 * K, resource: ELIXIR, time: 6 * HOURS, requiredTH: 3, picture: require('../assets/images/Barbarian1.png')},
     {level: 3, cost: 150 * K, resource: ELIXIR, time: 1 * DAYS, requiredTH: 5, picture: require('../assets/images/Barbarian3.png')},
@@ -170,7 +170,7 @@ export default {
     {level: 7, cost: 6 * M, resource: ELIXIR, time: 7.5 * DAYS, requiredTH: 10, picture: require('../assets/images/Barbarian7.png')},
     {level: 8, cost: 8 * M, resource: ELIXIR, time: 10 * DAYS, requiredTH: 11, picture: require('../assets/images/Barbarian8.png')},
   ],
-  [BUILDING_TYPES.TROOPS.ARCHER]: [
+  [BUILDING_TYPES.TROOPS['02ARCHER']]: [
     {level: 1, cost: 0, resource: ELIXIR, time: 0, requiredTH: 1, picture: require('../assets/images/Archer1.png')},
     {level: 2, cost: 50 * K, resource: ELIXIR, time: 12 * HOURS, requiredTH: 3, picture: require('../assets/images/Archer1.png')},
     {level: 3, cost: 250 * K, resource: ELIXIR, time: 1 * DAYS, requiredTH: 5, picture: require('../assets/images/Archer3.png')},
@@ -180,7 +180,7 @@ export default {
     {level: 7, cost: 7.5 * M, resource: ELIXIR, time: 7.5 * DAYS, requiredTH: 10, picture: require('../assets/images/Archer7.png')},
     {level: 8, cost: 9 * M, resource: ELIXIR, time: 10 * DAYS, requiredTH: 11, picture: require('../assets/images/Archer8.png')},
   ],
-  [BUILDING_TYPES.TROOPS.GIANT]: [
+  [BUILDING_TYPES.TROOPS['03GIANT']]: [
     {level: 1, cost: 0, resource: ELIXIR, time: 0, requiredTH: 1, picture: require('../assets/images/Giant1.png')},
     {level: 2, cost: 100 * K, resource: ELIXIR, time: 12 * HOURS, requiredTH: 4, picture: require('../assets/images/Giant1.png')},
     {level: 3, cost: 250 * K, resource: ELIXIR, time: 1.5 * DAYS, requiredTH: 6, picture: require('../assets/images/Giant3.png')},
@@ -191,7 +191,7 @@ export default {
     {level: 8, cost: 9.5 * M, resource: ELIXIR, time: 11.5 * DAYS, requiredTH: 11, picture: require('../assets/images/Giant8.png')},
     {level: 9, cost: 12 * M, resource: ELIXIR, time: 14 * DAYS, requiredTH: 12, picture: require('../assets/images/Giant9.png')},
   ],
-  [BUILDING_TYPES.TROOPS.GOBLIN]: [
+  [BUILDING_TYPES.TROOPS['04GOBLIN']]: [
     {level: 1, cost: 0, resource: ELIXIR, time: 0, requiredTH: 1, picture: require('../assets/images/Goblin1.png')},
     {level: 2, cost: 50 * K, resource: ELIXIR, time: 12 * HOURS, requiredTH: 3, picture: require('../assets/images/Goblin1.png')},
     {level: 3, cost: 250 * K, resource: ELIXIR, time: 1.5 * DAYS, requiredTH: 5, picture: require('../assets/images/Goblin3.png')},
@@ -200,7 +200,7 @@ export default {
     {level: 6, cost: 4.5 * M, resource: ELIXIR, time: 6.5 * DAYS, requiredTH: 9, picture: require('../assets/images/Goblin6.png')},
     {level: 7, cost: 6.75 * M, resource: ELIXIR, time: 10 * DAYS, requiredTH: 10, picture: require('../assets/images/Goblin7.png')},
   ],
-  [BUILDING_TYPES.TROOPS.WALL_BREAKER]: [
+  [BUILDING_TYPES.TROOPS['05WALL_BREAKER']]: [
     {level: 1, cost: 0, resource: ELIXIR, time: 0, requiredTH: 1, picture: require('../assets/images/Wall_Breaker1.png')},
     {level: 2, cost: 100 * K, resource: ELIXIR, time: 12 * HOURS, requiredTH: 4, picture: require('../assets/images/Wall_Breaker1.png')},
     {level: 3, cost: 250 * K, resource: ELIXIR, time: 1.5 * DAYS, requiredTH: 6, picture: require('../assets/images/Wall_Breaker3.png')},
@@ -210,7 +210,7 @@ export default {
     {level: 7, cost: 9 * M, resource: ELIXIR, time: 8 * DAYS, requiredTH: 11, picture: require('../assets/images/Wall_Breaker7.png')},
     {level: 8, cost: 12 * M, resource: ELIXIR, time: 10 * DAYS, requiredTH: 11, picture: require('../assets/images/Wall_Breaker7.png')},
   ],
-  [BUILDING_TYPES.TROOPS.BALLOON]: [
+  [BUILDING_TYPES.TROOPS['06BALLOON']]: [
     {level: 1, cost: 0, resource: ELIXIR, time: 0, requiredTH: 1, picture: require('../assets/images/Balloon1.png')},
     {level: 2, cost: 150 * K, resource: ELIXIR, time: 12 * HOURS, requiredTH: 4, picture: require('../assets/images/Balloon1.png')},
     {level: 3, cost: 450 * K, resource: ELIXIR, time: 1.5 * DAYS, requiredTH: 6, picture: require('../assets/images/Balloon3.png')},
@@ -220,7 +220,7 @@ export default {
     {level: 7, cost: 9.5 * M, resource: ELIXIR, time: 11.5 * DAYS, requiredTH: 11, picture: require('../assets/images/Balloon7.png')},
     {level: 8, cost: 12 * M, resource: ELIXIR, time: 12 * DAYS, requiredTH: 12, picture: require('../assets/images/Balloon8.png')},
   ],
-  [BUILDING_TYPES.TROOPS.WIZARD]: [
+  [BUILDING_TYPES.TROOPS['07WIZARD']]: [
     {level: 1, cost: 0, resource: ELIXIR, time: 0, requiredTH: 1, picture: require('../assets/images/Wizard1.png')},
     {level: 2, cost: 150 * K, resource: ELIXIR, time: 12 * HOURS, requiredTH: 5, picture: require('../assets/images/Wizard1.png')},
     {level: 3, cost: 450 * K, resource: ELIXIR, time: 1.5 * DAYS, requiredTH: 6, picture: require('../assets/images/Wizard3.png')},
@@ -231,14 +231,14 @@ export default {
     {level: 8, cost: 9 * M, resource: ELIXIR, time: 12 * DAYS, requiredTH: 11, picture: require('../assets/images/Wizard8.png')},
     {level: 9, cost: 11 * M, resource: ELIXIR, time: 12 * DAYS, requiredTH: 12, picture: require('../assets/images/Wizard9.png')},
   ],
-  [BUILDING_TYPES.TROOPS.HEALER]: [
+  [BUILDING_TYPES.TROOPS['08HEALER']]: [
     {level: 1, cost: 0, resource: ELIXIR, time: 0, requiredTH: 1, picture: require('../assets/images/Healer1.png')},
     {level: 2, cost: 750 * K, resource: ELIXIR, time: 2 * DAYS, requiredTH: 7, picture: require('../assets/images/Healer1.png')},
     {level: 3, cost: 1.5 * M, resource: ELIXIR, time: 3.5 * DAYS, requiredTH: 8, picture: require('../assets/images/Healer3.png')},
     {level: 4, cost: 3 * M, resource: ELIXIR, time: 6 * DAYS, requiredTH: 9, picture: require('../assets/images/Healer4.png')},
     {level: 5, cost: 9.5 * M, resource: ELIXIR, time: 14 * DAYS, requiredTH: 11, picture: require('../assets/images/Healer5.png')},
   ],
-  [BUILDING_TYPES.TROOPS.DRAGON]: [
+  [BUILDING_TYPES.TROOPS['09DRAGON']]: [
     {level: 1, cost: 0, resource: ELIXIR, time: 0, requiredTH: 1, picture: require('../assets/images/Dragon1.png')},
     {level: 2, cost: 2 * M, resource: ELIXIR, time: 4.5 * DAYS, requiredTH: 7, picture: require('../assets/images/Dragon2.png')},
     {level: 3, cost: 3 * M, resource: ELIXIR, time: 6 * DAYS, requiredTH: 8, picture: require('../assets/images/Dragon3.png')},
@@ -247,7 +247,7 @@ export default {
     {level: 6, cost: 9 * M, resource: ELIXIR, time: 11.5 * DAYS, requiredTH: 11, picture: require('../assets/images/Dragon6.png')},
     {level: 7, cost: 11 * M, resource: ELIXIR, time: 14 * DAYS, requiredTH: 12, picture: require('../assets/images/Dragon7.png')},
   ],
-  [BUILDING_TYPES.TROOPS.PEKKA]: [
+  [BUILDING_TYPES.TROOPS['10PEKKA']]: [
     {level: 1, cost: 0, resource: ELIXIR, time: 0, requiredTH: 1, picture: require('../assets/images/PEKKA1.png')},
     {level: 2, cost: 3 * M, resource: ELIXIR, time: 4.5 * DAYS, requiredTH: 8, picture: require('../assets/images/PEKKA2.png')},
     {level: 3, cost: 5 * M, resource: ELIXIR, time: 5.5 * DAYS, requiredTH: 8, picture: require('../assets/images/PEKKA3.png')},
@@ -257,7 +257,7 @@ export default {
     {level: 7, cost: 10 * M, resource: ELIXIR, time: 11.5 * DAYS, requiredTH: 11, picture: require('../assets/images/PEKKA7.png')},
     {level: 8, cost: 12 * M, resource: ELIXIR, time: 14 * DAYS, requiredTH: 12, picture: require('../assets/images/PEKKA7.png')},
   ],
-  [BUILDING_TYPES.TROOPS.BABY_DRAGON]: [
+  [BUILDING_TYPES.TROOPS['11BABY_DRAGON']]: [
     {level: 1, cost: 0, resource: ELIXIR, time: 0, requiredTH: 1, picture: require('../assets/images/Baby_Dragon1.png')},
     {level: 2, cost: 5 * M, resource: ELIXIR, time: 5.5 * DAYS, requiredTH: 9, picture: require('../assets/images/Baby_Dragon1.png')},
     {level: 3, cost: 6 * M, resource: ELIXIR, time: 6.5 * DAYS, requiredTH: 10, picture: require('../assets/images/Baby_Dragon3.png')},
@@ -265,7 +265,7 @@ export default {
     {level: 5, cost: 8 * M, resource: ELIXIR, time: 11.5 * DAYS, requiredTH: 11, picture: require('../assets/images/Baby_Dragon5.png')},
     {level: 6, cost: 9 * M, resource: ELIXIR, time: 14 * DAYS, requiredTH: 12, picture: require('../assets/images/Baby_Dragon6.png')},
   ],
-  [BUILDING_TYPES.TROOPS.MINER]: [
+  [BUILDING_TYPES.TROOPS['12MINER']]: [
     {level: 1, cost: 0, resource: ELIXIR, time: 0, requiredTH: 1, picture: require('../assets/images/Miner1.png')},
     {level: 2, cost: 6 * M, resource: ELIXIR, time: 5.5 * DAYS, requiredTH: 9, picture: require('../assets/images/Miner1.png')},
     {level: 3, cost: 7 * M, resource: ELIXIR, time: 6.5 * DAYS, requiredTH: 10, picture: require('../assets/images/Miner3.png')},
@@ -273,14 +273,14 @@ export default {
     {level: 5, cost: 9.5 * M, resource: ELIXIR, time: 11.5 * DAYS, requiredTH: 11, picture: require('../assets/images/Miner5.png')},
     {level: 6, cost: 11 * M, resource: ELIXIR, time: 14 * DAYS, requiredTH: 12, picture: require('../assets/images/Miner5.png')},
   ],
-  [BUILDING_TYPES.TROOPS.ELECTRO_DRAGON]: [
+  [BUILDING_TYPES.TROOPS['13ELECTRO_DRAGON']]: [
     {level: 1, cost: 0, resource: ELIXIR, time: 0, requiredTH: 1, picture: require('../assets/images/Electro_Dragon1.png')},
     {level: 2, cost: 9 * M, resource: ELIXIR, time: 10 * DAYS, requiredTH: 11, picture: require('../assets/images/Electro_Dragon1.png')},
     {level: 3, cost: 11 * M, resource: ELIXIR, time: 14 * DAYS, requiredTH: 12, picture: require('../assets/images/Electro_Dragon1.png')},
   ],
   //**END TROOPS**//
   //**DARK_TROOPS**//
-  [BUILDING_TYPES.DARK_TROOPS.MINION]: [
+  [BUILDING_TYPES.DARK_TROOPS['01MINION']]: [
     {level: 1, cost: 0, resource: BLACK, time: 0, requiredTH: 1, picture: require('../assets/images/Minion1.png')},
     {level: 2, cost: 10 * K, resource: BLACK, time: 3.5 * DAYS, requiredTH: 7, picture: require('../assets/images/Minion1.png')},
     {level: 3, cost: 20 * K, resource: BLACK, time: 4 * DAYS, requiredTH: 8, picture: require('../assets/images/Minion3.png')},
@@ -290,7 +290,7 @@ export default {
     {level: 7, cost: 140 * K, resource: BLACK, time: 11.5 * DAYS, requiredTH: 11, picture: require('../assets/images/Minion7.png')},
     {level: 8, cost: 180 * K, resource: BLACK, time: 14 * DAYS, requiredTH: 12, picture: require('../assets/images/Minion7.png')},
   ],
-  [BUILDING_TYPES.DARK_TROOPS.HOG_RIDER]: [
+  [BUILDING_TYPES.DARK_TROOPS['02HOG_RIDER']]: [
     {level: 1, cost: 0, resource: BLACK, time: 0, requiredTH: 1, picture: require('../assets/images/Hog_Rider1.png')},
     {level: 2, cost: 20 * K, resource: BLACK, time: 3.5 * DAYS, requiredTH: 7, picture: require('../assets/images/Hog_Rider1.png')},
     {level: 3, cost: 30 * K, resource: BLACK, time: 4 * DAYS, requiredTH: 8, picture: require('../assets/images/Hog_Rider3.png')},
@@ -300,7 +300,7 @@ export default {
     {level: 7, cost: 150 * K, resource: BLACK, time: 11.5 * DAYS, requiredTH: 11, picture: require('../assets/images/Hog_Rider7.png')},
     {level: 8, cost: 200 * K, resource: BLACK, time: 14 * DAYS, requiredTH: 12, picture: require('../assets/images/Hog_Rider8.png')},
   ],
-  [BUILDING_TYPES.DARK_TROOPS.VALKYRIE]: [
+  [BUILDING_TYPES.DARK_TROOPS['03VALKYRIE']]: [
     {level: 1, cost: 0, resource: BLACK, time: 0, requiredTH: 1, picture: require('../assets/images/Valkyrie1.png')},
     {level: 2, cost: 50 * K, resource: BLACK, time: 5.5 * DAYS, requiredTH: 8, picture: require('../assets/images/Valkyrie1.png')},
     {level: 3, cost: 60 * K, resource: BLACK, time: 6.5 * DAYS, requiredTH: 9, picture: require('../assets/images/Valkyrie3.png')},
@@ -309,7 +309,7 @@ export default {
     {level: 6, cost: 150 * K, resource: BLACK, time: 11.5 * DAYS, requiredTH: 11, picture: require('../assets/images/Valkyrie6.png')},
     {level: 7, cost: 190 * K, resource: BLACK, time: 14 * DAYS, requiredTH: 12, picture: require('../assets/images/Valkyrie6.png')},
   ],
-  [BUILDING_TYPES.DARK_TROOPS.GOLEM]: [
+  [BUILDING_TYPES.DARK_TROOPS['04GOLEM']]: [
     {level: 1, cost: 0, resource: BLACK, time: 0, requiredTH: 1, picture: require('../assets/images/Golem1.png')},
     {level: 2, cost: 60 * K, resource: BLACK, time: 3 * DAYS, requiredTH: 8, picture: require('../assets/images/Golem1.png')},
     {level: 3, cost: 70 * K, resource: BLACK, time: 5.5 * DAYS, requiredTH: 9, picture: require('../assets/images/Golem3.png')},
@@ -319,20 +319,20 @@ export default {
     {level: 7, cost: 200 * K, resource: BLACK, time: 11.5 * DAYS, requiredTH: 11, picture: require('../assets/images/Golem7.png')},
     {level: 8, cost: 200 * K, resource: BLACK, time: 14 * DAYS, requiredTH: 12, picture: require('../assets/images/Golem8.png')},
   ],
-  [BUILDING_TYPES.DARK_TROOPS.WITCH]: [
+  [BUILDING_TYPES.DARK_TROOPS['05WITCH']]: [
     {level: 1, cost: 0, resource: BLACK, time: 0, requiredTH: 1, picture: require('../assets/images/Witch1.png')},
     {level: 2, cost: 75 * K, resource: BLACK, time: 6.5 * DAYS, requiredTH: 9, picture: require('../assets/images/Witch1.png')},
     {level: 3, cost: 160 * K, resource: BLACK, time: 11.5 * DAYS, requiredTH: 11, picture: require('../assets/images/Witch3.png')},
     {level: 4, cost: 200 * K, resource: BLACK, time: 14 * DAYS, requiredTH: 12, picture: require('../assets/images/Witch3.png')},
   ],
-  [BUILDING_TYPES.DARK_TROOPS.LAVA_HOUND]: [
+  [BUILDING_TYPES.DARK_TROOPS['06LAVA_HOUND']]: [
     {level: 1, cost: 0, resource: BLACK, time: 0, requiredTH: 1, picture: require('../assets/images/Lava_Hound1.png')},
     {level: 2, cost: 60 * K, resource: BLACK, time: 6.5 * DAYS, requiredTH: 8, picture: require('../assets/images/Lava_Hound1.png')},
     {level: 3, cost: 70 * K, resource: BLACK, time: 8 * DAYS, requiredTH: 10, picture: require('../assets/images/Lava_Hound3.png')},
     {level: 4, cost: 150 * K, resource: BLACK, time: 11.5 * DAYS, requiredTH: 11, picture: require('../assets/images/Lava_Hound4.png')},
     {level: 5, cost: 200 * K, resource: BLACK, time: 14 * DAYS, requiredTH: 12, picture: require('../assets/images/Lava_Hound5.png')},
   ],
-  [BUILDING_TYPES.DARK_TROOPS.BOWLER]: [
+  [BUILDING_TYPES.DARK_TROOPS['07BOWLER']]: [
     {level: 1, cost: 0, resource: BLACK, time: 0, requiredTH: 1, picture: require('../assets/images/Bowler1.png')},
     {level: 2, cost: 120 * K, resource: BLACK, time: 8.5 * DAYS, requiredTH: 10, picture: require('../assets/images/Bowler1.png')},
     {level: 3, cost: 200 * K, resource: BLACK, time: 14 * DAYS, requiredTH: 11, picture: require('../assets/images/Bowler3.png')},
@@ -340,7 +340,7 @@ export default {
   ],
   //**END DARK_TROOPS**//
   //**SPELLS**//
-  [BUILDING_TYPES.SPELLS.LIGHTNING]: [
+  [BUILDING_TYPES.SPELLS['01LIGHTNING']]: [
     {level: 1, cost: 0, resource: ELIXIR, time: 0, requiredTH: 1, picture: require('../assets/images/Lightning_Spell.png')},
     {level: 2, cost: 200 * K, resource: ELIXIR, time: 1 * DAYS, requiredTH: 3, picture: require('../assets/images/Lightning_Spell.png')},
     {level: 3, cost: 500 * K, resource: ELIXIR, time: 2 * DAYS, requiredTH: 4, picture: require('../assets/images/Lightning_Spell.png')},
@@ -349,7 +349,7 @@ export default {
     {level: 6, cost: 6 * M, resource: ELIXIR, time: 6.5 * DAYS, requiredTH: 9, picture: require('../assets/images/Lightning_Spell.png')},
     {level: 7, cost: 8 * M, resource: ELIXIR, time: 14 * DAYS, requiredTH: 10, picture: require('../assets/images/Lightning_Spell.png')},
   ],
-  [BUILDING_TYPES.SPELLS.HEALING]: [
+  [BUILDING_TYPES.SPELLS['02HEALING']]: [
     {level: 1, cost: 0, resource: ELIXIR, time: 0, requiredTH: 1, picture: require('../assets/images/Healing_Spell.png')},
     {level: 2, cost: 300 * K, resource: ELIXIR, time: 1 * DAYS, requiredTH: 4, picture: require('../assets/images/Healing_Spell.png')},
     {level: 3, cost: 600 * K, resource: ELIXIR, time: 2 * DAYS, requiredTH: 6, picture: require('../assets/images/Healing_Spell.png')},
@@ -358,14 +358,14 @@ export default {
     {level: 6, cost: 4 * M, resource: ELIXIR, time: 7 * DAYS, requiredTH: 9, picture: require('../assets/images/Healing_Spell.png')},
     {level: 7, cost: 6 * M, resource: ELIXIR, time: 10 * DAYS, requiredTH: 10, picture: require('../assets/images/Healing_Spell.png')},
   ],
-  [BUILDING_TYPES.SPELLS.RAGE]: [
+  [BUILDING_TYPES.SPELLS['03RAGE']]: [
     {level: 1, cost: 0, resource: ELIXIR, time: 0, requiredTH: 1, picture: require('../assets/images/Rage_Spell.png')},
     {level: 2, cost: 450 * K, resource: ELIXIR, time: 2 * DAYS, requiredTH: 5, picture: require('../assets/images/Rage_Spell.png')},
     {level: 3, cost: 900 * K, resource: ELIXIR, time: 3 * DAYS, requiredTH: 6, picture: require('../assets/images/Rage_Spell.png')},
     {level: 4, cost: 1.8 * M, resource: ELIXIR, time: 5 * DAYS, requiredTH: 7, picture: require('../assets/images/Rage_Spell.png')},
     {level: 5, cost: 3 * M, resource: ELIXIR, time: 7 * DAYS, requiredTH: 8, picture: require('../assets/images/Rage_Spell.png')},
   ],
-  [BUILDING_TYPES.SPELLS.JUMP]: [
+  [BUILDING_TYPES.SPELLS['04JUMP']]: [
     {level: 1, cost: 0, resource: ELIXIR, time: 0, requiredTH: 1, picture: require('../assets/images/Jump_Spell.png')},
     {level: 2, cost: 3 * M, resource: ELIXIR, time: 5 * DAYS, requiredTH: 7, picture: require('../assets/images/Jump_Spell.png')},
     {level: 3, cost: 6 * M, resource: ELIXIR, time: 7 * DAYS, requiredTH: 10, picture: require('../assets/images/Jump_Spell.png')},
@@ -379,7 +379,7 @@ export default {
     {level: 6, cost: 9.5 * M, resource: ELIXIR, time: 9 * DAYS, requiredTH: 11, picture: require('../assets/images/Freeze_Spell.png')},
     {level: 7, cost: 11 * M, resource: ELIXIR, time: 11.5 * DAYS, requiredTH: 12, picture: require('../assets/images/Freeze_Spell.png')},
   ],
-  [BUILDING_TYPES.SPELLS.CLONE]: [
+  [BUILDING_TYPES.SPELLS['05CLONE']]: [
     {level: 1, cost: 0, resource: ELIXIR, time: 0, requiredTH: 1, picture: require('../assets/images/Clone_Spell.png')},
     {level: 2, cost: 4 * M, resource: ELIXIR, time: 4 * DAYS, requiredTH: 10, picture: require('../assets/images/Clone_Spell.png')},
     {level: 3, cost: 6 * M, resource: ELIXIR, time: 5 * DAYS, requiredTH: 10, picture: require('../assets/images/Clone_Spell.png')},
@@ -388,26 +388,26 @@ export default {
   ],
   //**END SPELLS**//
   //**DARK_SPELLS**//
-  [BUILDING_TYPES.DARK_SPELLS.POISON]: [
+  [BUILDING_TYPES.DARK_SPELLS['01POISON']]: [
     {level: 1, cost: 0, resource: BLACK, time: 0, requiredTH: 1, picture: require('../assets/images/Poison_Spell.png')},
     {level: 2, cost: 25 * K, resource: BLACK, time: 2.5 * DAYS, requiredTH: 8, picture: require('../assets/images/Poison_Spell.png')},
     {level: 3, cost: 50 * K, resource: BLACK, time: 4 * DAYS, requiredTH: 9, picture: require('../assets/images/Poison_Spell.png')},
     {level: 4, cost: 75 * K, resource: BLACK, time: 6.5 * DAYS, requiredTH: 10, picture: require('../assets/images/Poison_Spell.png')},
     {level: 5, cost: 150 * K, resource: BLACK, time: 9.5 * DAYS, requiredTH: 11, picture: require('../assets/images/Poison_Spell.png')},
   ],
-  [BUILDING_TYPES.DARK_SPELLS.EARTHQUAKE]: [
+  [BUILDING_TYPES.DARK_SPELLS['02EARTHQUAKE']]: [
     {level: 1, cost: 0, resource: BLACK, time: 0, requiredTH: 1, picture: require('../assets/images/Earthquake_Spell.png')},
     {level: 2, cost: 30 * K, resource: BLACK, time: 4 * DAYS, requiredTH: 8, picture: require('../assets/images/Earthquake_Spell.png')},
     {level: 3, cost: 80 * K, resource: BLACK, time: 5 * DAYS, requiredTH: 9, picture: require('../assets/images/Earthquake_Spell.png')},
     {level: 4, cost: 90 * K, resource: BLACK, time: 9.5 * DAYS, requiredTH: 10, picture: require('../assets/images/Earthquake_Spell.png')},
   ],
-  [BUILDING_TYPES.DARK_SPELLS.HASTE]: [
+  [BUILDING_TYPES.DARK_SPELLS['03HASTE']]: [
     {level: 1, cost: 0, resource: BLACK, time: 0, requiredTH: 1, picture: require('../assets/images/Haste_Spell.png')},
     {level: 2, cost: 40 * K, resource: BLACK, time: 4 * DAYS, requiredTH: 9, picture: require('../assets/images/Haste_Spell.png')},
     {level: 3, cost: 80 * K, resource: BLACK, time: 6.5 * DAYS, requiredTH: 10, picture: require('../assets/images/Haste_Spell.png')},
     {level: 4, cost: 100 * K, resource: BLACK, time: 9 * DAYS, requiredTH: 10, picture: require('../assets/images/Haste_Spell.png')},
   ],
-  [BUILDING_TYPES.DARK_SPELLS.SKELETON]: [
+  [BUILDING_TYPES.DARK_SPELLS['04SKELETON']]: [
     {level: 1, cost: 0, resource: BLACK, time: 0, requiredTH: 1, picture: require('../assets/images/Skeleton_Spell.png')},
     {level: 2, cost: 50 * K, resource: BLACK, time: 4 * DAYS, requiredTH: 10, picture: require('../assets/images/Skeleton_Spell.png')},
     {level: 3, cost: 75 * K, resource: BLACK, time: 6.5 * DAYS, requiredTH: 10, picture: require('../assets/images/Skeleton_Spell.png')},
@@ -416,19 +416,19 @@ export default {
   ],
   //**END DARK_SPELLS**//
   //**SIEGE_MACHINES**//
-  [BUILDING_TYPES.SIEGE_MACHINES.WALL_WRECKER]: [
+  [BUILDING_TYPES.SIEGE_MACHINES['01WALL_WRECKER']]: [
     {level: 1, cost: 0, resource: ELIXIR, time: 0, requiredTH: 1, picture: require('../assets/images/Wall_Wrecker1.png')},
     {level: 2, cost: 8 * M, resource: ELIXIR, time: 8 * DAYS, requiredTH: 12, picture: require('../assets/images/Wall_Wrecker2.png')},
     {level: 3, cost: 8 * M, resource: ELIXIR, time: 10 * DAYS, requiredTH: 12, picture: require('../assets/images/Wall_Wrecker3.png')},
   ],
-  [BUILDING_TYPES.SIEGE_MACHINES.BATTLE_BLIMP]: [
+  [BUILDING_TYPES.SIEGE_MACHINES['02BATTLE_BLIMP']]: [
     {level: 1, cost: 0, resource: ELIXIR, time: 0, requiredTH: 1, picture: require('../assets/images/Battle_Blimp1.png')},
     {level: 2, cost: 6 * M, resource: ELIXIR, time: 8 * DAYS, requiredTH: 12, picture: require('../assets/images/Battle_Blimp2.png')},
     {level: 3, cost: 8 * M, resource: ELIXIR, time: 10 * DAYS, requiredTH: 12, picture: require('../assets/images/Battle_Blimp3.png')},
   ],
   //**END SIEGE_MACHINES**//
   //**HEROES**//
-  [BUILDING_TYPES.HEROES.KING]: [
+  [BUILDING_TYPES.HEROES['01KING']]: [
     {level: 1, cost: 10 * K, resource: BLACK, time: 0, requiredTH: 7, picture: require('../assets/images/Barbarian_King1.png')},
     {level: 2, cost: 12.5 * K, resource: BLACK, time: 0.5 * DAYS, requiredTH: 7, picture: require('../assets/images/Barbarian_King1.png')},
     {level: 3, cost: 15 * K, resource: BLACK, time: 0.5 * DAYS, requiredTH: 7, picture: require('../assets/images/Barbarian_King1.png')},
@@ -490,7 +490,7 @@ export default {
     {level: 59, cost: 224 * K, resource: BLACK, time: 7 * DAYS, requiredTH: 12, picture: require('../assets/images/Barbarian_King41.png')},
     {level: 60, cost: 227 * K, resource: BLACK, time: 7 * DAYS, requiredTH: 12, picture: require('../assets/images/Barbarian_King41.png')},
   ],
-  [BUILDING_TYPES.HEROES.QUEEN]: [
+  [BUILDING_TYPES.HEROES['02QUEEN']]: [
     {level: 1, cost: 40 * K, resource: BLACK, time: 0, requiredTH: 9, picture: require('../assets/images/Archer_Queen1.png')},
     {level: 2, cost: 22.5 * K, resource: BLACK, time: 0.5 * DAYS, requiredTH: 9, picture: require('../assets/images/Archer_Queen1.png')},
     {level: 3, cost: 25 * K, resource: BLACK, time: 0.5 * DAYS, requiredTH: 9, picture: require('../assets/images/Archer_Queen1.png')},
@@ -552,7 +552,7 @@ export default {
     {level: 59, cost: 232 * K, resource: BLACK, time: 7 * DAYS, requiredTH: 12, picture: require('../assets/images/Archer_Queen41.png')},
     {level: 60, cost: 236 * K, resource: BLACK, time: 7 * DAYS, requiredTH: 12, picture: require('../assets/images/Archer_Queen41.png')},
   ],
-  [BUILDING_TYPES.HEROES.GRAND_WARDEN]: [
+  [BUILDING_TYPES.HEROES['03GRAND_WARDEN']]: [
     {level: 1, cost: 6 * M, resource: ELIXIR, time: 0, requiredTH: 11, picture: require('../assets/images/Grand_Warden1.png')},
     {level: 2, cost: 2.5 * M, resource: ELIXIR, time: 0.5 * DAYS, requiredTH: 11, picture: require('../assets/images/Grand_Warden1.png')},
     {level: 3, cost: 3 * M, resource: ELIXIR, time: 1 * DAYS, requiredTH: 11, picture: require('../assets/images/Grand_Warden1.png')},
@@ -586,7 +586,7 @@ export default {
   ],
   //**END HEROES**//
   //**BUILDING**//
-  [BUILDING_TYPES.BUILDING.GOLD_MINE]: [
+  [BUILDING_TYPES.BUILDING['01GOLD_MINE']]: [
     {level: 1, cost: 150, resource: ELIXIR, time: 10, requiredTH: 1, picture: require('../assets/images/Gold_Mine1.png')},
     {level: 2, cost: 300, resource: ELIXIR, time: 60, requiredTH: 1, picture: require('../assets/images/Gold_Mine2.png')},
     {level: 3, cost: 700, resource: ELIXIR, time: 15 * MINUTES, requiredTH: 2, picture: require('../assets/images/Gold_Mine3.png')},
@@ -600,7 +600,7 @@ export default {
     {level: 11, cost: 168 * K, resource: ELIXIR, time: 2.5 * DAYS, requiredTH: 7, picture: require('../assets/images/Gold_Mine11.png')},
     {level: 12, cost: 336 * K, resource: ELIXIR, time: 3 * DAYS, requiredTH: 8, picture: require('../assets/images/Gold_Mine12.png')},
   ],
-  [BUILDING_TYPES.BUILDING.ELIXIR_COLLECTOR]: [
+  [BUILDING_TYPES.BUILDING['03ELIXIR_COLLECTOR']]: [
     {level: 1, cost: 150, resource: GOLD, time: 10, requiredTH: 1, picture: require('../assets/images/Elixir_Collector1.png')},
     {level: 2, cost: 300, resource: GOLD, time: 60, requiredTH: 1, picture: require('../assets/images/Elixir_Collector2.png')},
     {level: 3, cost: 700, resource: GOLD, time: 15 * MINUTES, requiredTH: 2, picture: require('../assets/images/Elixir_Collector3.png')},
@@ -614,7 +614,7 @@ export default {
     {level: 11, cost: 168 * K, resource: GOLD, time: 2.5 * DAYS, requiredTH: 7, picture: require('../assets/images/Elixir_Collector11.png')},
     {level: 12, cost: 336 * K, resource: GOLD, time: 3 * DAYS, requiredTH: 8, picture: require('../assets/images/Elixir_Collector12.png')},
   ],
-  [BUILDING_TYPES.BUILDING.BLACK_DRILL]: [
+  [BUILDING_TYPES.BUILDING['05BLACK_DRILL']]: [
     {level: 1, cost: 1 * M, resource: ELIXIR, time: 0.5 * DAYS, requiredTH: 7, picture: require('../assets/images/Dark_Elixir_Drill1.png')},
     {level: 2, cost: 1.5 * M, resource: ELIXIR, time: 1.5 * DAYS, requiredTH: 7, picture: require('../assets/images/Dark_Elixir_Drill2.png')},
     {level: 3, cost: 2 * M, resource: ELIXIR, time: 2 * DAYS, requiredTH: 7, picture: require('../assets/images/Dark_Elixir_Drill3.png')},
@@ -622,7 +622,7 @@ export default {
     {level: 5, cost: 4 * M, resource: ELIXIR, time: 4 * DAYS, requiredTH: 9, picture: require('../assets/images/Dark_Elixir_Drill5.png')},
     {level: 6, cost: 5 * M, resource: ELIXIR, time: 5.5 * DAYS, requiredTH: 9, picture: require('../assets/images/Dark_Elixir_Drill6.png')},
   ],
-  [BUILDING_TYPES.BUILDING.GOLD_STORAGE]: [
+  [BUILDING_TYPES.BUILDING['02GOLD_STORAGE']]: [
     {level: 1, cost: 300, resource: ELIXIR, time: 10, requiredTH: 1, picture: require('../assets/images/Gold_Storage1.png')},
     {level: 2, cost: 750, resource: ELIXIR, time: 15 * MINUTES, requiredTH: 2, picture: require('../assets/images/Gold_Storage2.png')},
     {level: 3, cost: 1.5 * K, resource: ELIXIR, time: 30 * MINUTES, requiredTH: 2, picture: require('../assets/images/Gold_Storage3.png')},
@@ -637,7 +637,7 @@ export default {
     {level: 12, cost: 2.5 * M, resource: ELIXIR, time: 4 * DAYS, requiredTH: 11, picture: require('../assets/images/Gold_Storage12.png')},
     {level: 13, cost: 5 * M, resource: ELIXIR, time: 7 * DAYS, requiredTH: 12, picture: require('../assets/images/Gold_Storage13.png')},
   ],
-  [BUILDING_TYPES.BUILDING.ELIXIR_STORAGE]: [
+  [BUILDING_TYPES.BUILDING['04ELIXIR_STORAGE']]: [
     {level: 1, cost: 300, resource: GOLD, time: 10, requiredTH: 1, picture: require('../assets/images/Elixir_Storage1.png')},
     {level: 2, cost: 750, resource: GOLD, time: 15 * MINUTES, requiredTH: 2, picture: require('../assets/images/Elixir_Storage2.png')},
     {level: 3, cost: 1.5 * K, resource: GOLD, time: 30 * MINUTES, requiredTH: 2, picture: require('../assets/images/Elixir_Storage3.png')},
@@ -652,7 +652,7 @@ export default {
     {level: 12, cost: 2.5 * M, resource: GOLD, time: 4 * DAYS, requiredTH: 11, picture: require('../assets/images/Elixir_Storage12.png')},
     {level: 13, cost: 5 * M, resource: GOLD, time: 7 * DAYS, requiredTH: 12, picture: require('../assets/images/Elixir_Storage13.png')},
   ],
-  [BUILDING_TYPES.BUILDING.BLACK_STORAGE]: [
+  [BUILDING_TYPES.BUILDING['06BLACK_STORAGE']]: [
     {level: 1, cost: 600 * K, resource: ELIXIR, time: 0.5 * DAYS, requiredTH: 7, picture: require('../assets/images/Dark_Elixir_Storage1.png')},
     {level: 2, cost: 1.2 * M, resource: ELIXIR, time: 1.5 * DAYS, requiredTH: 7, picture: require('../assets/images/Dark_Elixir_Storage2.png')},
     {level: 3, cost: 1.8 * M, resource: ELIXIR, time: 2 * DAYS, requiredTH: 8, picture: require('../assets/images/Dark_Elixir_Storage3.png')},
@@ -661,7 +661,7 @@ export default {
     {level: 6, cost: 3.6 * M, resource: ELIXIR, time: 4 * HOURS, requiredTH: 9, picture: require('../assets/images/Dark_Elixir_Storage6.png')},
     {level: 7, cost: 4.2 * M, resource: ELIXIR, time: 7 * HOURS, requiredTH: 12, picture: require('../assets/images/Dark_Elixir_Storage7.png')},
   ],
-  [BUILDING_TYPES.BUILDING.CLAN_CASTLE]: [
+  [BUILDING_TYPES.BUILDING['07CLAN_CASTLE']]: [
     {level: 1, cost: 10 * K, resource: GOLD, time: 0, requiredTH: 3, picture: require('../assets/images/Clan_Castle1.png')},
     {level: 2, cost: 100 * M, resource: GOLD, time: 4 * HOURS, requiredTH: 4, picture: require('../assets/images/Clan_Castle2.png')},
     {level: 3, cost: 800 * M, resource: GOLD, time: 12 * HOURS, requiredTH: 6, picture: require('../assets/images/Clan_Castle3.png')},
@@ -671,7 +671,7 @@ export default {
     {level: 7, cost: 10 * M, resource: GOLD, time: 10 * DAYS, requiredTH: 11, picture: require('../assets/images/Clan_Castle7.png')},
     {level: 8, cost: 12 * M, resource: GOLD, time: 14 * DAYS, requiredTH: 12, picture: require('../assets/images/Clan_Castle8.png')},
   ],
-  [BUILDING_TYPES.BUILDING.ARMY_CAMP]: [
+  [BUILDING_TYPES.BUILDING['08ARMY_CAMP']]: [
     {level: 1, cost: 250, resource: ELIXIR, time: 5 * MINUTES, requiredTH: 1, picture: require('../assets/images/Army_Camp1.png')},
     {level: 2, cost: 2.5 * K, resource: ELIXIR, time: 1 * HOURS, requiredTH: 2, picture: require('../assets/images/Army_Camp2.png')},
     {level: 3, cost: 10 * K, resource: ELIXIR, time: 2 * HOURS, requiredTH: 3, picture: require('../assets/images/Army_Camp3.png')},
@@ -683,7 +683,7 @@ export default {
     {level: 9, cost: 9 * M, resource: ELIXIR, time: 11 * DAYS + 16 * HOURS, requiredTH: 11, picture: require('../assets/images/Army_Camp9.png')},
     {level: 10, cost: 9 * M, resource: ELIXIR, time: 14 * DAYS, requiredTH: 12, picture: require('../assets/images/Army_Camp10.png')},
   ],
-  [BUILDING_TYPES.BUILDING.BARRACK]: [
+  [BUILDING_TYPES.BUILDING['09BARRACK']]: [
     {level: 1, cost: 250, resource: ELIXIR, time: 10, requiredTH: 1, picture: require('../assets/images/Barracks1.png')},
     {level: 2, cost: 1 * K, resource: ELIXIR, time: 30 * MINUTES, requiredTH: 1, picture: require('../assets/images/Barracks2.png')},
     {level: 3, cost: 2.5 * K, resource: ELIXIR, time: 1 * HOURS, requiredTH: 1, picture: require('../assets/images/Barracks3.png')},
@@ -698,7 +698,7 @@ export default {
     {level: 12, cost: 4 * M, resource: ELIXIR, time: 7 * DAYS, requiredTH: 10, picture: require('../assets/images/Barracks12.png')},
     {level: 13, cost: 4 * M, resource: ELIXIR, time: 12 * DAYS, requiredTH: 11, picture: require('../assets/images/Barracks13.png')},
   ],
-  [BUILDING_TYPES.BUILDING.DARK_BARRACK]: [
+  [BUILDING_TYPES.BUILDING['12DARK_BARRACK']]: [
     {level: 1, cost: 750 * K, resource: ELIXIR, time: 2 * DAYS, requiredTH: 7, picture: require('../assets/images/Dark_Barracks1.png')},
     {level: 2, cost: 1.25 * M, resource: ELIXIR, time: 3.5 * DAYS, requiredTH: 7, picture: require('../assets/images/Dark_Barracks2.png')},
     {level: 3, cost: 1.75 * M, resource: ELIXIR, time: 4 * DAYS, requiredTH: 8, picture: require('../assets/images/Dark_Barracks3.png')},
@@ -707,7 +707,7 @@ export default {
     {level: 6, cost: 3.5 * M, resource: ELIXIR, time: 7 * DAYS, requiredTH: 9, picture: require('../assets/images/Dark_Barracks6.png')},
     {level: 7, cost: 6 * M, resource: ELIXIR, time: 12 * DAYS, requiredTH: 10, picture: require('../assets/images/Dark_Barracks7.png')},
   ],
-  [BUILDING_TYPES.BUILDING.LABORATORY]: [
+  [BUILDING_TYPES.BUILDING['10LABORATORY']]: [
     {level: 1, cost: 25 * K, resource: ELIXIR, time: 30 * MINUTES, requiredTH: 3, picture: require('../assets/images/Laboratory1.png')},
     {level: 2, cost: 50 * K, resource: ELIXIR, time: 3 * HOURS, requiredTH: 4, picture: require('../assets/images/Laboratory2.png')},
     {level: 3, cost: 90 * K, resource: ELIXIR, time: 8 * HOURS, requiredTH: 5, picture: require('../assets/images/Laboratory3.png')},
@@ -719,26 +719,26 @@ export default {
     {level: 9, cost: 2.5 * M, resource: ELIXIR, time: 6 * DAYS, requiredTH: 11, picture: require('../assets/images/Laboratory9.png')},
     {level: 10, cost: 2.5 * M, resource: ELIXIR, time: 8 * DAYS, requiredTH: 12, picture: require('../assets/images/Laboratory10.png')},
   ],
-  [BUILDING_TYPES.BUILDING.SPELL_FACTORY]: [
+  [BUILDING_TYPES.BUILDING['11SPELL_FACTORY']]: [
     {level: 1, cost: 200 * K, resource: ELIXIR, time: 12 * HOURS, requiredTH: 5, picture: require('../assets/images/Spell_Factory1.png')},
     {level: 2, cost: 400 * K, resource: ELIXIR, time: 1.5 * DAYS, requiredTH: 6, picture: require('../assets/images/Spell_Factory2.png')},
     {level: 3, cost: 800 * K, resource: ELIXIR, time: 2.5 * DAYS, requiredTH: 7, picture: require('../assets/images/Spell_Factory3.png')},
     {level: 4, cost: 1.6 * M, resource: ELIXIR, time: 3.5 * DAYS, requiredTH: 9, picture: require('../assets/images/Spell_Factory4.png')},
     {level: 5, cost: 3.2 * M, resource: ELIXIR, time: 6 * DAYS, requiredTH: 10, picture: require('../assets/images/Spell_Factory5.png')},
   ],
-  [BUILDING_TYPES.BUILDING.DARK_SPELL_FACTORY]: [
+  [BUILDING_TYPES.BUILDING['13DARK_SPELL_FACTORY']]: [
     {level: 1, cost: 1.5 * M, resource: ELIXIR, time: 2.5 * DAYS, requiredTH: 8, picture: require('../assets/images/Dark_Spell_Factory1.png')},
     {level: 2, cost: 1.5 * M, resource: ELIXIR, time: 4 * DAYS, requiredTH: 8, picture: require('../assets/images/Dark_Spell_Factory2.png')},
     {level: 3, cost: 3.5 * M, resource: ELIXIR, time: 5.5 * DAYS, requiredTH: 9, picture: require('../assets/images/Dark_Spell_Factory3.png')},
     {level: 4, cost: 4.5 * M, resource: ELIXIR, time: 6.5 * DAYS, requiredTH: 9, picture: require('../assets/images/Dark_Spell_Factory4.png')},
   ],
-  [BUILDING_TYPES.BUILDING.WORKSHOP]: [
+  [BUILDING_TYPES.BUILDING['14WORKSHOP']]: [
     {level: 1, cost: 7.5 * M, resource: ELIXIR, time: 6 * DAYS, requiredTH: 12, picture: require('../assets/images/Workshop1.png')},
     {level: 2, cost: 9 * M, resource: ELIXIR, time: 8 * DAYS, requiredTH: 12, picture: require('../assets/images/Workshop2.png')},
   ],
   //**END BUILDING**//
   //**TRAPS**//
-  [BUILDING_TYPES.TRAPS.BOMB]: [
+  [BUILDING_TYPES.TRAPS['01BOMB']]: [
     {level: 1, cost: 400, resource: GOLD, time: 0, requiredTH: 3, picture: require('../assets/images/Bomb1.png')},
     {level: 2, cost: 1 * K, resource: GOLD, time: 15 * MINUTES, requiredTH: 3, picture: require('../assets/images/Bomb1.png')},
     {level: 3, cost: 10 * K, resource: GOLD, time: 2 * HOURS, requiredTH: 5, picture: require('../assets/images/Bomb3.png')},
@@ -747,33 +747,33 @@ export default {
     {level: 6, cost: 1.5 * M, resource: GOLD, time: 2 * DAYS, requiredTH: 9, picture: require('../assets/images/Bomb5.png')},
     {level: 7, cost: 2 * M, resource: GOLD, time: 3 * DAYS, requiredTH: 10, picture: require('../assets/images/Bomb7.png')},
   ],
-  [BUILDING_TYPES.TRAPS.SPRING_TRAP]: [
+  [BUILDING_TYPES.TRAPS['02SPRING_TRAP']]: [
     {level: 1, cost: 2 * K, resource: GOLD, time: 0, requiredTH: 4, picture: require('../assets/images/Spring_Trap1.png')},
     {level: 2, cost: 500 * K, resource: GOLD, time: 16 * HOURS, requiredTH: 7, picture: require('../assets/images/Spring_Trap1.png')},
     {level: 3, cost: 1 * M, resource: GOLD, time: 1 * DAYS, requiredTH: 8, picture: require('../assets/images/Spring_Trap3.png')},
     {level: 4, cost: 1.5 * M, resource: GOLD, time: 2 * DAYS, requiredTH: 9, picture: require('../assets/images/Spring_Trap3.png')},
     {level: 5, cost: 2 * M, resource: GOLD, time: 3 * DAYS, requiredTH: 10, picture: require('../assets/images/Spring_Trap5.png')},
   ],
-  [BUILDING_TYPES.TRAPS.AIR_BOMB]: [
+  [BUILDING_TYPES.TRAPS['03AIR_BOMB']]: [
     {level: 1, cost: 4 * K, resource: GOLD, time: 0, requiredTH: 5, picture: require('../assets/images/Air_Bomb1.png')},
     {level: 2, cost: 20 * K, resource: GOLD, time: 4 * HOURS, requiredTH: 5, picture: require('../assets/images/Air_Bomb1.png')},
     {level: 3, cost: 200 * K, resource: GOLD, time: 0.5 * DAYS, requiredTH: 7, picture: require('../assets/images/Air_Bomb3.png')},
     {level: 4, cost: 1.5 * M, resource: GOLD, time: 1 * DAYS, requiredTH: 9, picture: require('../assets/images/Air_Bomb3.png')},
     {level: 5, cost: 2.5 * M, resource: GOLD, time: 2 * DAYS, requiredTH: 11, picture: require('../assets/images/Air_Bomb5.png')},
   ],
-  [BUILDING_TYPES.TRAPS.GIANT_BOMB]: [
+  [BUILDING_TYPES.TRAPS['04GIANT_BOMB']]: [
     {level: 1, cost: 12.5 * K, resource: GOLD, time: 0, requiredTH: 6, picture: require('../assets/images/Giant_Bomb1.png')},
     {level: 2, cost: 75 * K, resource: GOLD, time: 6 * HOURS, requiredTH: 6, picture: require('../assets/images/Giant_Bomb1.png')},
     {level: 3, cost: 750 * K, resource: GOLD, time: 1 * DAYS, requiredTH: 8, picture: require('../assets/images/Giant_Bomb3.png')},
     {level: 4, cost: 2.5 * M, resource: GOLD, time: 3 * DAYS, requiredTH: 10, picture: require('../assets/images/Giant_Bomb3.png')},
     {level: 5, cost: 3.5 * M, resource: GOLD, time: 5 * DAYS, requiredTH: 11, picture: require('../assets/images/Giant_Bomb5.png')},
   ],
-  [BUILDING_TYPES.TRAPS.SEEKING_AIR_MINE]: [
+  [BUILDING_TYPES.TRAPS['05SEEKING_AIR_MINE']]: [
     {level: 1, cost: 15 * K, resource: GOLD, time: 0, requiredTH: 7, picture: require('../assets/images/Seeking_Air_Mine1.png')},
     {level: 2, cost: 2 * M, resource: GOLD, time: 1 * DAYS, requiredTH: 9, picture: require('../assets/images/Seeking_Air_Mine1.png')},
     {level: 3, cost: 4 * M, resource: GOLD, time: 3 * DAYS, requiredTH: 10, picture: require('../assets/images/Seeking_Air_Mine3.png')},
   ],
-  [BUILDING_TYPES.TRAPS.SKELETON_TRAP]: [
+  [BUILDING_TYPES.TRAPS['06SKELETON_TRAP']]: [
     {level: 1, cost: 6 * K, resource: GOLD, time: 0, requiredTH: 8, picture: require('../assets/images/Skeleton_Trap1.png')},
     {level: 2, cost: 600 * K, resource: GOLD, time: 6 * HOURS, requiredTH: 8, picture: require('../assets/images/Skeleton_Trap1.png')},
     {level: 3, cost: 1.3 * M, resource: GOLD, time: 1 * DAYS, requiredTH: 9, picture: require('../assets/images/Skeleton_Trap3.png')},
