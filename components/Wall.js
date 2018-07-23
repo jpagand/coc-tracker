@@ -11,7 +11,13 @@ import ResourceRecap from './ResourceRecap';
 
 class WallComponent extends Component {
     shouldComponentUpdate(nextProps, nextState) {
-      return nextProps.wall.quantity !== this.props.wall.quantity
+      if (nextProps.wall.quantity !== this.props.wall.quantity) {
+        return true
+      }
+      if (nextProps.totalWall !== this.props.totalWall) {
+        return true
+      }
+      return false
     }
     render() {
     const { wall, townHall, onMinusClick, onPlusClick, totalWall, maxWalls } = this.props;
