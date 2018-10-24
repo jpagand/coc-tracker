@@ -785,9 +785,9 @@ export default {
     {level: 4, cost: 2 * M, resource: GOLD, time: 2 * DAYS, requiredTH: 10, picture: require('../assets/images/Skeleton_Trap3.png')},
   ],
   [BUILDING_TYPES.TRAPS['07TORNADO_TRAP']]: [
-    {level: 1, cost: 3 * M, resource: GOLD, time: 0, requiredTH: 8, picture: require('../assets/images/Tornado_Trap1.png')},
-    {level: 2, cost: 4 * M, resource: GOLD, time: 2 * DAYS, requiredTH: 8, picture: require('../assets/images/Tornado_Trap2.png')},
-    {level: 3, cost: 5 * M, resource: GOLD, time: 3 * DAYS, requiredTH: 9, picture: require('../assets/images/Tornado_Trap2.png')},
+    {level: 1, cost: 3 * M, resource: GOLD, time: 0, requiredTH: 11, picture: require('../assets/images/Tornado_Trap1.png')},
+    {level: 2, cost: 4 * M, resource: GOLD, time: 2 * DAYS, requiredTH: 11, picture: require('../assets/images/Tornado_Trap2.png')},
+    {level: 3, cost: 5 * M, resource: GOLD, time: 3 * DAYS, requiredTH: 12, picture: require('../assets/images/Tornado_Trap2.png')},
   ],
   //**END TRAPS**//
   //WALLS//
