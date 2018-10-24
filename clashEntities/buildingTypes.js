@@ -45,6 +45,7 @@ export default {
     '03RAGE': '03RAGE',
     '04JUMP': '04JUMP',
     '05CLONE': '05CLONE'
+    '06CLONE': '06CLONE'
   },
   'DARK_SPELLS': {
     '01POISON': '01POISON',
